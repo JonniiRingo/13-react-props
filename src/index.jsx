@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Card(props){
   return (
-    <div> 
+    <div className = "my-style"> 
       <h2>{props.name}</h2>
       <img  src={props.img} alt="avatar_img" />
       <p>{props.tel}</p>
