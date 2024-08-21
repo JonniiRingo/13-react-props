@@ -1,7 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getELementByID("root")); 
+
+
+
+function Card(props){
+  return (
+    <div> 
+      <h2>{props.name}</h2>
+      <img  src={props.img} alt="avatar_img" />
+      <p>{props.tel}</p>
+      <p>{props.email}</p>
+    </div>
+  );
+}
+
+root.render(
   <div>
     <h1>My Contacts</h1>
 
@@ -28,12 +43,5 @@ ReactDOM.render(
     />
     <p>+918 372 574</p>
     <p>gmail@chucknorris.com</p>
-  </div>,
-  document.getElementById("root")
+  </div>
 );
-
-// If you're running this locally in VS Code use the commands:
-// npm install
-// to install the node modules and
-// npm run dev
-// to launch your react project in your browser
